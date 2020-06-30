@@ -1,0 +1,14 @@
+import numpy as np
+from PIL import Image
+from PIL import ImageChops
+file1 = Image.open("412UhqVfhwL.jpg")
+file2 = Image.open("412UhqVfhwL_1.jpg")
+diff = ImageChops.difference(file1, file2)
+
+if diff.getbbox():
+    print("images are different")
+else:
+    print("images are the same")
+    
+    
+    
